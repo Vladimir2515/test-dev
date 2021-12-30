@@ -1,0 +1,103 @@
+$bg__color-1: #64abf9;
+$bg__color-2: #ffffff;
+$bg__color-3: #75e169;
+$bg__color-4: #67aefc;
+$bg__color-5: #daecff;
+$bg__color-6: #6bd75f;
+
+$text__color-1: #ffffff;
+$text__color-2: #484848;
+$text__color-3: #000000;
+$text__color-4: #111111;
+$text__color-5: #f9f9f9;
+$text__color-6: #6eb1fb;
+$text__color-7: #292929;
+$text__color-8: #939393;
+$text__color-9: red;
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    font-family: "Montserrat", sans-serif;
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    background-color: #fbfbfb;
+}
+
+body._lock {
+    overflow: hidden;
+}
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+button {
+    cursor: pointer;
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+a,
+a:visited {
+    text-decoration: none;
+    color: $text__color-1;
+}
+a:hover {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+@import "_header";
+@import "_main";
+@import "_footer";

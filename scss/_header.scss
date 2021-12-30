@@ -1,0 +1,194 @@
+.header {
+    width: 100%;
+    background: $bg__color-4;
+    .header__container {
+        max-width: 1170px;
+        width: 90%;
+        display: flex;
+        margin: 0px auto;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        min-height: 95px;
+        .header__logo {
+            width: 242px;
+            height: 59px;
+            z-index: 3;
+        }
+        .header__btn {
+            margin-left: 30px;
+            min-width: 170px;
+            .menu__btn {
+                display: flex;
+                width: 100%;
+                min-height: 37.78px;
+                justify-content: center;
+                align-items: center;
+                background: $bg__color-3;
+                border-radius: 5px;
+                font-weight: 600;
+                font-size: 16px;
+                transition: all 0.1s ease;
+                color: $text__color-1;
+            }
+
+            .menu__btn:active {
+                background: $text__color-1;
+                color: $bg__color-4;
+            }
+
+            .menu__btn:hover {
+                border: 2px solid $text__color-1;
+            }
+        }
+    }
+}
+
+.header__menu {
+    display: flex;
+    flex-direction: row;
+}
+.menu__list > li {
+    margin: 0px 0px 0px 30px;
+}
+.menu__link {
+    color: $text__color-1;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+.menu__icon {
+    display: none;
+}
+
+@media (min-width: 1201px) {
+    .menu__list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .menu__list > li {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .menu__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu__list > li {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .header__container {
+        max-width: 900px;
+        min-width: 310px;
+        margin: 0 auto;
+    }
+    .menu__icon {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+        z-index: 3;
+    }
+    .menu__icon span,
+    .menu__icon::before,
+    .menu__icon::after {
+        left: 0;
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        transition: all 0.3s ease 0s;
+        background-color: $bg__color-2;
+        border-radius: 50%;
+    }
+    .menu__icon::before,
+    .menu__icon::after {
+        content: "";
+    }
+    .menu__icon::before {
+        top: -70%;
+    }
+    .menu__icon::after {
+        bottom: -90%;
+    }
+    .menu__icon span {
+        top: 25%;
+    }
+
+    .menu__icon._active {
+        transform: rotate(90deg);
+    }
+    .menu__body {
+        position: fixed;
+        top: 0;
+        left: -120%;
+        width: 100%;
+        height: 328px;
+        background: $bg__color-1;
+        padding: 100px 30px 30px 30px;
+        transition: left 0.3s ease 0s;
+        overflow: auto;
+        z-index: 1;
+    }
+
+    .menu__body._active {
+        left: 0;
+    }
+    .menu__body::before {
+        content: "";
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 95px;
+        z-index: 2;
+    }
+    .menu__list > li {
+        margin: 0px 0px 30px 0px;
+        text-align: center;
+    }
+    .menu__list > li:last-child {
+        margin-bottom: 0;
+    }
+    .menu__link {
+        font-weight: 800;
+        font-size: 17px;
+        line-height: 27px;
+        text-transform: uppercase;
+        color: $text__color-1;
+
+        &:hover {
+            text-decoration: underline 2px solid $text__color-1;
+        }
+    }
+    .header__btn {
+        display: none;
+    }
+}
+@media (max-width: 950px) {
+    .header__container {
+        max-width: 620px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 680px) {
+    .header__container {
+        max-width: 410px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 450px) {
+    .header__container {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
